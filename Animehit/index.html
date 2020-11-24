@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeHit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" href="İmages/animate.png" type="images/x-icon">
+    <link rel="stylesheet" href="Css/bootstrap.min (5).css">
+    <script src="https://kit.fontawesome.com/56a11feb63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Css/style.css">
+    <style>
+        .carousel-inner2 {
+            height: 75vh;
+            background: url(İmages/39033.png);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -- Start -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light linear">
+        <div class="container">
+            <img class="image mr-3"
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGNpcmNsZSBzdHlsZT0iZmlsbDojMjcwNjAwOyIgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjU2Ii8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkYzMjAwOyIgZD0iTTI3NS4zODQsMzc3LjMyM0wxNzcuNTQxLDU4LjE3MmMtNS4wMjYtMTYuMDI5LTIzLjcwOS0yNC44NDgtNDQuNDI5LTI2Ljc5MQ0KCQljLTIuOTQ3LTAuMjgyLTUuOTM1LTAuNDE4LTguOTM0LTAuNDE4Yy0yNC4wNjQsMC00Ny42MTYsOC45MDItNTMuMzYzLDI3LjIwOUw2MS4xMDgsOTAuMDFMMS42MzMsMjg1LjAzOQ0KCQljNS4wOTksNDUuMTYsMjEuOTQzLDg2Ljc2OCw0Ny40MDcsMTIxLjY3OGMxLjAzNC0xLjU1NywxLjg0OS0zLjMzMywyLjQxNC01LjMyOWwxNy43ODQtNjUuNGgxMTAuNDAzbDE3Ljc4NCw2NS40DQoJCWMzLjE0NSwxMC45OTIsMTMuNjA0LDE1LjE4MiwyNi42ODcsMTUuMTgyYzIyLjQ5NywwLDUyLjMxOC0xNC4xMjcsNTIuMzE4LTMzLjQ4OUMyNzYuNDI5LDM4MS41MTMsMjc1LjkwNywzNzkuNDEzLDI3NS4zODQsMzc3LjMyMw0KCQl6IE04NS45ODcsMjczLjIxbDM4LjE5MS0xNDAuMjI0bDM4LjE5MSwxNDAuMjI0SDg1Ljk4N3oiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkYzMjAwOyIgZD0iTTUwOS4wODUsMjE3LjI0NmMtMTUuOTU1LTMxLjU3Ny00NC40MTgtNTIuODYxLTc1LjU3Ny01Mi44NjENCgkJYy0zNS4wNTYsMC02MC4xNzUsMTkuMzUxLTcwLjExMiwzOS43NTh2LTEyLjAyN2MwLTE0LjY0OS0xNi4yMTctMjQuNTk3LTM1LjU3OS0yNC41OTdjLTIzLjU0MSwwLTQwLjI4MSw5Ljk0Ny00MC4yODEsMjQuNTk3DQoJCVYzOTEuNDVjMCwxMi41NiwxNi43MzksMjUuMTE5LDQwLjI4MSwyNS4xMTljMjEuOTc0LDAsNDAuODEzLTEyLjU2LDQwLjgxMy0yNS4xMTlWMjc0LjI1NWMwLTI0LjU4NiwxNy43ODQtMzkuMjQ2LDM1LjA1Ni0zOS4yNDYNCgkJYzIwLjkxOSwwLDM3LjY2OCwxOS4zNjIsMzcuNjY4LDM5LjI0NlYzOTEuNDVjMCw5Ljg1Myw3LjQ0LDE2LjgxMiwxNy4zOTcsMjAuODY2QzQ5Mi4xMzcsMzY5LjA3OSw1MTIsMzE0Ljg0OSw1MTIsMjU2LjAwMQ0KCQlDNTEyLDI0Mi44MjUsNTExLjAwNywyMjkuODg5LDUwOS4wODUsMjE3LjI0NnoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+            <a class="navbar-brand text-warning" href="#">AnimeHit</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-danger" href="#">AnaSayfa <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info" href="#">Haberler</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Neler Var?
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-warning" href="cin-anime.html">Animeler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-info" href="#">Karakterler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Mangalar</a>
+
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Anime-Karakter Arama"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Arama Butonu</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -- End -->
+
+    <!-- Header -- Start -->
+    <section class=" text-center carousel-inner2">
+        <div class="container">
+            <div class="carousel-caption">
+                <h1 class="jumbotron-heading weig">AnimeHit</h1>
+                <p class="lead text-white weig">Tüm Anime Karakterleri ve Tüm Anime Listesi İçin AnimeHit Sayfasına
+                    Hoşgeldiniz.</p>
+                <p>
+                    <a href="cin-anime.html" class="btn btn-info my-2 btn-lg">Animeler</a>
+                    <a href="#" class="btn btn-warning my-2 btn-lg">Karakterler</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--/.Carousel Wrapper-->
+
+    <!-- Main -- Start -->
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="İmages/39033.png" alt="Card image cap">
+                        <h5 class="card-title mt-3 pl-3">Karakterler</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tüm Karakter İçin Aşağıdaki Butona Tıklayınız.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Tıkla Kanka</button>
+                                </div>
+                                <small class="text-muted">2 Gün Önce Paylaşıldı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="İmages/21d76fb0-86cf-11e9-adc4-49c7aa99a775_800_420.png"
+                            alt="Card image cap">
+                        <h5 class="card-title mt-3 pl-3">Japon Animeleri</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tüm Japon Anime Listesi İçin Aşağıdaki Butona Tıklayınız.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Tıkla Kanka</button>
+                                </div>
+                                <small class="text-muted">1 Gün Önce Paylaşıldı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="İmages/chinese-anime-list.jpg" alt="Chinese-List">
+                        <h5 class="card-title mt-3 pl-3">Çin Animeleri</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tüm Çin Anime Listesi İçin Aşağıdaki Butona Tıklayınız.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="cin-anime.html" type="button" class="btn btn-sm btn-outline-secondary">Tıkla Kanka</a>
+                                </div>
+                                <small class="text-muted">1 Gün Önce Paylaşıldı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="İmages/Manga-Banna-2020-v1-scaled.jpg" alt="Card image cap">
+                        <h5 class="card-title mt-3 pl-3">Mangalar</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tüm Manga Listesi İçin Aşağıdaki Butona Tıklayın</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Tıkla Kanka</button>
+                                </div>
+                                <small class="text-muted">2 Saat Önce Paylaşıldı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="İmages/anime-paper.jpg" alt="Card image cap">
+                        <h5 class="card-title mt-3 pl-3">Anime Haberleri</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tüm Anime Haberleri İçin Aşağıdaki Butona Tıklayın</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Tıkla Kanka</button>
+                                </div>
+                                <small class="text-muted">2 Saat Önce Paylaşıldı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="İmages/top10_anime-2.jpg" alt="Card image cap">
+                        <h5 class="card-title mt-3 pl-3">Top 10 Anime Listesi</h5>
+                        <div class="card-body">
+                            <p class="card-text">Bu Haftanın En İyi 10 Animesi İçin Aşağıdaki Butona Tıklayın</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Tıkla Kanka</button>
+                                </div>
+                                <small class="text-muted">2 Saat Önce Paylaşıldı</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Main -- End -->
+
+    <!-- Section -- Start -->
+    <div class="us">
+        <hr class="featurette-divider">
+        <p class="text-center lead big">İçerik Editörlerimiz</p>
+        <br><br>
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="İmages/zoro.jpg" alt="Generic placeholder image" width="140"
+                        height="140">
+                    <h2>Furkan (Zoro)</h2>
+                    <p>AnimeHit Site Tasarımı Lideri</p>
+                    <p>Çin Animesi Sevdalısı | En Sevdiği Anime : Douluo Dalu</p>
+                    <p><a class="btn btn-secondary btn-danger" href="#" role="button">Detayları &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="İmages/Minato_Namikaze.png" alt="Generic placeholder image"
+                        width="140" height="140">
+                    <h2>Fatih (Minato)</h2>
+                    <p>AnimeHit İçerik Editörü</p>
+                    <p>Haberler Kısmındaki Başrolümüz | En Sevdiği Anime : Bütün Animeler</p>
+                    <p><a class="btn btn-secondary btn-warning" href="#" role="button">Detayları &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="İmages/meliodas.jpg" alt="Generic placeholder image" width="140"
+                        height="140">
+                    <h2>Ercüment (Meliodas)</h2>
+                    <p>AnimeHit Site Tasarım Uzmanı</p>
+                    <p>Üst Düzey Site Tasarımı İle Uğraşan Başrolümüz | En Sevdiği Anime : Sanırım Alucard</p>
+                    <p><a class="btn btn-secondary btn-info" href="#" role="button">Detayları &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div>
+
+        <br><br><br>
+
+        <!-- Section -- End -->
+
+        <!-- Footer -- Start -->
+        <footer class="page-footer font-small special-color-dark pt-4 weig">
+            <!-- Footer Elements -->
+            <div class="container">
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-4">
+                            <!-- Form -->
+                            <form class="form-inline">
+                                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                                    aria-label="Search">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </form>
+                            <!-- Form -->
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-4">
+
+                            <form class="input-group">
+                                <input type="text" class="form-control form-control-sm mr-2"
+                                    placeholder="Bildirimleri Almak İstiyorsanız E-mail Adresiniz"
+                                    aria-label="Bildirimleri Almak İstiyorsanız E-mail Adresiniz"
+                                    aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-sm btn-outline-success lead my-0" type="button">Ücretsiz
+                                        Abone Ol</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <br>
+                    <!--Grid row-->
+                    <!-- Sosyal Medya Butonları -->
+                    <ul class="list-unstyled list-inline text-center">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-fb mx-1">
+                                <i class="fab fa-facebook-f"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-tw mx-1">
+                                <i class="fab fa-twitter"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-gplus mx-1">
+                                <i class="fab fa-google-plus-g"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-li mx-1">
+                                <i class="fab fa-linkedin-in"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-dribbble mx-1">
+                                <i class="fab fa-dribbble"> </i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Sosyal Medya Butonları -- End -->
+                </div>
+                <!-- Footer Elements -->
+                <!-- Copyright -- Start -->
+                <div class="footer-copyright text-center py-3">© 2020 Tüm Hakları Saklıdır. Copyright:
+                    <a href="#"> AnimeHit</a>
+                </div>
+                <!-- Copyright -- End -->
+        </footer>
+        <!-- Footer -- End -->
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
